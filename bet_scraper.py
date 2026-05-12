@@ -39,9 +39,10 @@ def save_seen_hashes(seen_hashes):
         for hash_val in seen_hashes:
             f.write(hash_val + '\n')
 
-def generate_bet_hash(match, prediction, odds, status):
-    """Generate a unique hash for a bet to detect duplicates."""
-    bet_string = f"{match}|{prediction}|{odds}|{status}"
+def generate_bet_hash(match, prediction, odds, status, scrape_date):
+    """Generate a unique hash for a bet to detect duplicates.
+    Includes date to allow same teams/odds/result on different days."""
+    bet_string = f"{scrape_date}|{match}|{prediction}|{odds}|{status}"
     return hashlib.md5(bet_string.encode('utf-8')).hexdigest()
 
 def parse_bet_status(text_content):
@@ -113,6 +114,9 @@ def scrape_bets():
                     import re
                     odds = re.sub(r'[^\d.]', '', odds_raw.split()[0] if ' ' in odds_raw else odds_raw)
                     
+                    # Get current date for hash uniqueness
+                    scrape_date = datetime.now().strftime("%Y-%m-%d")
+                    
                     bet_data = {
                         'match': teams,
                         'prediction': prediction,
@@ -120,15 +124,16 @@ def scrape_bets():
                         'result': '',
                         'status': status,
                         'scraped_at': datetime.now().isoformat(),
-                        'source_url': URL
+                        'date': scrape_date
                     }
                     
-                    # Generate hash for duplicate detection
+                    # Generate hash for duplicate detection (includes date)
                     bet_hash = generate_bet_hash(
                         bet_data['match'],
                         bet_data['prediction'],
                         bet_data['odds'],
-                        bet_data['status']
+                        bet_data['status'],
+                        scrape_date
                     )
                     bet_data['hash'] = bet_hash
                     
@@ -158,7 +163,7 @@ def save_bets_csv(bets):
     if not bets:
         return
     
-    fieldnames = ['match', 'prediction', 'odds', 'result', 'status', 'scraped_at', 'source_url', 'hash']
+    fieldnames = ['match', 'prediction', 'odds', 'result', 'status', 'scraped_at', 'date', 'hash']
     
     with open(CSV_FILE, 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)

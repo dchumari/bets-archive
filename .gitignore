@@ -1,0 +1,25 @@
+```
+# Data files that might contain runtime state
+data/.seen_bet_ids.json
+data/.seen_hashes.txt
+
+# Environment and temporary files
+.env
+.env.local
+*.tmp
+*.log
+
+# Dependencies and build artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Editors
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+```

@@ -1,0 +1,48 @@
+name: Daily Bet Scraper
+
+on:
+  schedule:
+    # Runs daily at 2:00 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    # Allows manual triggering for testing
+
+jobs:
+  scrape-bets:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4
+      
+      - name: Run bet scraper
+        run: |
+          python3 bet_scraper.py --days 7
+      
+      - name: Check output files
+        run: |
+          echo "=== JSON Output (last 20 lines) ==="
+          tail -n 20 data/finished_bets.json || echo "No JSON file created"
+          echo ""
+          echo "=== CSV Output (last 20 lines) ==="
+          tail -n 20 data/finished_bets.csv || echo "No CSV file created"
+          echo ""
+          echo "=== File sizes ==="
+          ls -lh data/ 2>/dev/null || echo "No data directory"
+      
+      - name: Upload results as artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: bet-results
+          path: data/
+          retention-days: 7
+          if-no-files-found: warn

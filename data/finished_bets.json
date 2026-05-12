@@ -1,0 +1,122 @@
+[
+  {
+    "match": "Huesca – Sociedad B",
+    "prediction": "1",
+    "odds": "1.86",
+    "result": "",
+    "status": "LOST",
+    "scraped_at": "2026-05-12T00:31:47.979289",
+    "source_url": "https://combobets.com/football-predictions/most-popular-bets/",
+    "hash": "ac6700109ba94b2d96e718dfae35dcb7"
+  },
+  {
+    "match": "Tottenham – Leeds",
+    "prediction": "1",
+    "odds": "1.80",
+    "result": "",
+    "status": "LOST",
+    "scraped_at": "2026-05-12T00:31:47.979414",
+    "source_url": "https://combobets.com/football-predictions/most-popular-bets/",
+    "hash": "42b81a42d1a1b7497ab6162e61e03e4b"
+  },
+  {
+    "match": "Guimaraes – Casa Pia",
+    "prediction": "1",
+    "odds": "1.66",
+    "result": "",
+    "status": "LOST",
+    "scraped_at": "2026-05-12T00:31:47.979435",
+    "source_url": "https://combobets.com/football-predictions/most-popular-bets/",
+    "hash": "acc913864b6eeeb262238c8656793c8d"
+  },
+  {
+    "match": "Napoli – Bologna",
+    "prediction": "1",
+    "odds": "1.53",
+    "result": "",
+    "status": "LOST",
+    "scraped_at": "2026-05-12T00:31:47.979445",
+    "source_url": "https://combobets.com/football-predictions/most-popular-bets/",
+    "hash": "45d84104bce7840680239134793c179f"
+  },
+  {
+    "match": "Benfica – Braga",
+    "prediction": "1",
+    "odds": "1.39",
+    "result": "",
+    "status": "LOST",
+    "scraped_at": "2026-05-12T00:31:47.979455",
+    "source_url": "https://combobets.com/football-predictions/most-popular-bets/",
+    "hash": "8b27354c6ad2dde41edfb4f0ea0dcedf"
+  },
+  {
+    "match": "Cremonese – Pisa",
+    "prediction": "1",
+    "odds": "1.70",
+    "result": "",
+    "status": "WON",
+    "scraped_at": "2026-05-12T00:31:47.979464",
+    "source_url": "https://combobets.com/football-predictions/most-popular-bets/",
+    "hash": "2bba226a0a5eed1bac49fecaf6dc8ecb"
+  },
+  {
+    "match": "Barcelona – Real Madrid",
+    "prediction": "1",
+    "odds": "1.61",
+    "result": "",
+    "status": "WON",
+    "scraped_at": "2026-05-12T00:31:47.979473",
+    "source_url": "https://combobets.com/football-predictions/most-popular-bets/",
+    "hash": "6b1d0c0c6ebfe16b9357ff4e1d8fa38f"
+  },
+  {
+    "match": "West Ham – Arsenal",
+    "prediction": "2",
+    "odds": "1.55",
+    "result": "",
+    "status": "WON",
+    "scraped_at": "2026-05-12T00:31:47.979480",
+    "source_url": "https://combobets.com/football-predictions/most-popular-bets/",
+    "hash": "2ba0936c5b21869b1f124f3894d1b790"
+  },
+  {
+    "match": "Rennes – Paris FC",
+    "prediction": "1",
+    "odds": "1.55",
+    "result": "",
+    "status": "WON",
+    "scraped_at": "2026-05-12T00:31:47.979487",
+    "source_url": "https://combobets.com/football-predictions/most-popular-bets/",
+    "hash": "ed009016a8a51730e5600a233c514d60"
+  },
+  {
+    "match": "Parma – Roma",
+    "prediction": "2",
+    "odds": "1.50",
+    "result": "",
+    "status": "WON",
+    "scraped_at": "2026-05-12T00:31:47.979495",
+    "source_url": "https://combobets.com/football-predictions/most-popular-bets/",
+    "hash": "b1b974b9e104f7c6629a47945986a1b8"
+  },
+  {
+    "match": "Man City – Brentford",
+    "prediction": "1",
+    "odds": "1.33",
+    "result": "",
+    "status": "WON",
+    "scraped_at": "2026-05-12T00:31:47.979502",
+    "source_url": "https://combobets.com/football-predictions/most-popular-bets/",
+    "hash": "d829e4ddb4beb82352924bdfb02e3c1d"
+  },
+  {
+    "match": "Brighton – Wolves",
+    "prediction": "1",
+    "odds": "1.25",
+    "result": "",
+    "status": "WON",
+    "scraped_at": "2026-05-12T00:31:47.979515",
+    "source_url": "https://combobets.com/football-predictions/most-popular-bets/",
+    "hash": "f8eb67c88dce70628631324149368ab8"
+  }
+]
